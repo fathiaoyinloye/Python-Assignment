@@ -1,3 +1,7 @@
+#	assign values to investment, anual return rate, and years as it is stated in the exercise
+#	calculate the deposit at the end of the month by using the formula
+#	 a = p(1 + r) raise to power n
+
 investment = 1000
 
 return_rate = 7/100

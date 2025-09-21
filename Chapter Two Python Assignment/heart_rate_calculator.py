@@ -1,3 +1,7 @@
+# 	promt user to enter age
+#	maximum heart rate is subtracting age from 220
+#	range calculated by multiplying 50 and 85% to the maximum heart rate
+#	print maximum heartbeat and range
 age = int (input("Enter your age: "))
 
 maximum_heart_rate = 220 - age

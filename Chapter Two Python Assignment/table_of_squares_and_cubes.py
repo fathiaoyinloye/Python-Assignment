@@ -1,3 +1,9 @@
+# create variable for 0 to 5
+# print the variable, variable multiply variable and variable multiply variable multiply variable
+# all this should be separated by tab
+# do for each variable one after the other
+
+
 print("number\t\tsquare\t\tcube")
 a = 0
 b = 1

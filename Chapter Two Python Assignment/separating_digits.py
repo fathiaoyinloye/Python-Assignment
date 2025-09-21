@@ -1,3 +1,13 @@
+# prompt user to enter a five digit number
+# seperate the digit 
+# divide number by 10000 to get firstdigit
+# the remainder of the first digit division  by 1000 gives second digit
+# the remainder of the second digit division  by 100 gives third digit
+# the remainder of the third digit division gives last digit
+#print egg digit
+
+
+ss
 five_digit_number = int (input("Enter a five digit number: "))
 
 

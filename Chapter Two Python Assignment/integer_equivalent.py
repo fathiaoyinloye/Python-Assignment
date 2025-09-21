@@ -1,3 +1,6 @@
+# create a variable for each Character
+# print them
+
 a = ord("A")
 
 b = ord("B") 
