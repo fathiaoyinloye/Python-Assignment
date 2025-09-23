@@ -15,21 +15,21 @@ day7 = "Sunday"
 number = int(input("Enter number from 1 - 7: "))
 
 if(number == 1):
-	println(day1)
+	print(day1)
 
 elif(number == 2):
-	println(day2)
+	print(day2)
 
 elif(number == 3):
-	println(day3)
+	print(day3)
 
 elif(number == 4):
-	println(day4)
+	print(day4)
 
 elif(number == 5):
-	println(day5)
+	print(day5)
 
 elif(number == 6):
-	println(day7)
+	print(day7)
 else:
-	println("Invalid input, please input number from 1 - 7")
+	print("Invalid input, please input number from 1 - 7")

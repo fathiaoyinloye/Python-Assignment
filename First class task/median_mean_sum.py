@@ -36,5 +36,5 @@ if(first_number >  number4):
 	number4 = fourth_number
 
 
-median = ((first_number + second_number + third_number + fourth_number) - (number1 + number4)) // 2
+median = (sum - (number1 + number4)) // 2
 print( "The median of the number is ", median)
