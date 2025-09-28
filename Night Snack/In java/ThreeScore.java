@@ -1,7 +1,7 @@
 /*	prompt user to enter three scores
-	create a variable total and assign zero to it
-	create a variable average and assign 0 to it
-	create a variable count and assign 1 to it
+	create a container total and assign zero to it
+	create a container average and assign 0 to it
+	create a container count and assign 1 to it
 	Repeat the following process as long as variable count is less that 1 and count should increase at every repetition.
 	collect the scores and assign  it to each variable
 	total should increase by score 
