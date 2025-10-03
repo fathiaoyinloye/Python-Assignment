@@ -7,16 +7,12 @@ while(count < 10):
 	if count == 0:
 		largest = number
 
-	if count == 1:
-		largestTwo = number
-
 	if number > largest:
+		largestTwo = largest;
 		largest = number
-
-	if number > largest and number > largestTwo:
-		largestTwo = number
-
-	print(largest, largestTwo)
+	if number < largest and number > largestTwo:
+			largestTwo = number	
+	
 
 print(largest,largestTwo)
 
