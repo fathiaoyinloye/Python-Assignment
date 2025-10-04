@@ -659,12 +659,32 @@ while(menu_display_going):
 								case "1":
 									print(" 	Call costs limit") 
 									print("		0 -> Go back")
-								case "2" : print("Show costs in") 
+								case "2" :
+									forward = True
+									while(forward):
+										print("	Show costs in...")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+
+
 								case "0" : call_cost_settings_going = False
 								case _ : print("Invalid Input")
 
 
-					case "8" : print("Prepaid credit")
+					case "8" :
+						forward = True
+						while(forward):
+							print("	Prepaid credit...")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
 					case "0": call_register_going = False
 					case _ : print("Invalid Input")
 
@@ -692,15 +712,105 @@ while(menu_display_going):
 				print(tones)
 				tones_menu = input("Choose from the above Tones dropdown menu: ")
 				match tones_menu:
-					case "1" : print("Ringing tone") 
-					case "2" : print("Ringing volume") 
-					case "3" : print("Incoming call alert")
-					case "4" : print("Composer")
-					case "5" : print("Message alert tones")
-					case "6" : print("Keypad tones") 
-					case "7" : print("Warning and game tones")
-					case "8" : print("Vibrating alert")
-					case "9" : print("Screen saver")
+					case "1" :
+						forward = True
+						while(forward):
+							print("	Ringing tone")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+
+					case "2" :
+						forward = True
+						while(forward):
+							print("	Ringing volume")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+
+
+					case "3" :
+						forward = True
+						while(forward):
+							print("	Ringing volume")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+
+					case "4" : 
+						forward = True
+						while(forward):
+							print("Incoming call alert")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+					case "5" :
+						forward = True
+						while(forward):
+							print("	Message alert tones")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+					case "6" : 
+						forward = True
+						while(forward):
+							print("	Keypad tones")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+					case "7" :
+						forward = True
+						while(forward):
+							print("	Warning and game tones")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+
+					case "8" : 
+						forward = True
+						while(forward):
+							print("	Vibrating alert")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+
+					case "9" : 
+						forward = True
+						while(forward):
+							print("	Screen saver")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+
+
+
 					case "0" : tones_menu_going = False
 					case _ : print("Invalid Input")
 
@@ -742,12 +852,72 @@ while(menu_display_going):
 							print(call_setting );
 							call_setting_menu = int(input("Choose from the above Call settings dropdown menu: "))
 							match call_setting_menu:
-								case "1" : print("Automatic redial")  
-								case "2" : print("Speed dialing") 
-								case "3" : print("Call waiting options")
-								case "4" : print("Own number sending")
-								case "5" : print("Phone line in use") 
-								case "6" : print("Automatic answer") 
+								case "1" :
+									forward = True
+									while(forward):
+										print("	Automatic redial")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+
+
+								case "2" :
+									forward = True
+									while(forward):
+										print("	Speed dialing")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+
+
+								case "3" :
+									forward = True
+									while(forward):
+										print("	Call waiting options")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+								case "4" :
+									forward = True
+									while(forward):
+										print("	Own number sending")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+								case "5" : 
+									forward = True
+									while(forward):
+										print("	Phone line in use")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+
+								case "6" :
+									forward = True
+									while(forward):
+										print("	Automatic answer")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+
 								case "0" : call_setting_going = False
 								case _ : print("Invalid Input")
 
