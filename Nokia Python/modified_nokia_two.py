@@ -834,7 +834,7 @@ while(menu_display_going):
 				print(settings)
 				settings_menu = input("Choose from the above Settings dropdown menu: ")
 				match settings_menu:
-					case 1 : 
+					case "1" : 
 						call_setting = """
 						Call Setting
 						1 -> Automatic redial
@@ -850,7 +850,7 @@ while(menu_display_going):
 						call_setting_going = True
 						while(call_setting_going):
 							print(call_setting );
-							call_setting_menu = int(input("Choose from the above Call settings dropdown menu: "))
+							call_setting_menu = input("Choose from the above Call settings dropdown menu: ")
 							match call_setting_menu:
 								case "1" :
 									forward = True
@@ -940,18 +940,79 @@ while(menu_display_going):
 							print(phone_setting );
 							phone_setting_menu = input("Choose from the above Phone settings dropdown menu: ")
 							match phone_setting_menu:
-								case "1" : print("Language")  
-								case "2" : print("Cell info display") 
-								case "3" : print(" Welcome note")
-								case "4" : print("Network selection")
-								case "5" : print("Lights") 
-								case "6" : print("Confirm SIM service actions") 
+								case "1" :
+									forward = True
+									while(forward):
+										print("	Language")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+
+								case "2" : 
+									forward = True
+									while(forward):
+										print("	Cell info display")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+
+								case "3" : 
+									forward = True
+									while(forward):
+										print("	 Welcome note")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+
+								case "4" : 
+									forward = True
+									while(forward):
+										print("	 Network selection")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+			 
+						
+
+								case "5" : 
+									forward = True
+									while(forward):
+										print("	 Lights")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+
+								case "6" : 
+									forward = True
+									while(forward):
+										print("	 Confirm SIM service actions")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
 								case "0" : phone_setting_going = False
 								case _ : print("Invalid Input")
 
 
 
-					case 3 : 
+					case "3" : 
 						security_setting = """
 						Security Setting
 						1 -> Pin code request
@@ -970,16 +1031,86 @@ while(menu_display_going):
 							print(security_setting);
 							security_setting_menu = input("Choose from the above Security settings dropdown menu: ")
 							match security_setting_menu:
-								case "1" : print("Pin code request")  
-								case "2" : print("Call barring service") 
-								case "3" : print("Fixed dialing")
-								case "4" : print("Closed user group")
-								case "5" : print("Phone security") 
-								case "6" : print("Change access codes") 
+								case "1" :
+									forward = True
+									while(forward):
+										print("		Pin code request")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+ 
+								case "2" : 
+									forward = True
+									while(forward):
+										print("		Call barring service")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+								case "3" : 
+									forward = True
+									while(forward):
+										print("	Fixed dialing")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+
+
+								case "4" : 
+									forward = True
+									while(forward):
+										print("	Closed user group")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+
+								case "5" :
+									forward = True
+									while(forward):
+										print("	Phone security")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+								case "6" : 
+									forward = True
+									while(forward):
+										print("	 Change access codes")
+										print(" 	0 -> Previous menu")
+										choose = input("Choose 0 to go back to previous menu: ")
+						
+										match choose:
+											case "0" : forward = False
+											case _ : print("	Invalid Input, Please go back to previous menu")
+
 								case "0" : security_setting_going = False
 								case _ : print("Invalid Input")
 
-					case "4": print("Restore Factory Settings")
+					case "4":
+						forward = True
+						while(forward):
+							print("	Restore Factory Settings")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+
+
 					case "0": setting_menu_going = False
 					case _ : print("Invalid Input")
 
@@ -988,10 +1119,53 @@ while(menu_display_going):
 
 
 
-		case "7" : print("Call divert")
-		case "8" : print("Games")
-		case "9" : print("Calculator")
-		case "10" : print("Remainders")
+		case "7" :
+			forward = True
+			while(forward):
+				print("	Call divert")
+				print(" 	0 -> Previous menu")
+				choose = input("Choose 0 to go back to previous menu: ")
+						
+				match choose:
+					case "0" : forward = False
+					case _ : print("	Invalid Input, Please go back to previous menu")
+
+
+		case "8" : 
+			forward = True
+			while(forward):
+				print("	Games")
+				print(" 	0 -> Previous menu")
+				choose = input("Choose 0 to go back to previous menu: ")
+						
+				match choose:
+					case "0" : forward = False
+					case _ : print("	Invalid Input, Please go back to previous menu")
+
+		case "9" : 
+			forward = True
+			while(forward):
+				print("	Calculator")
+				print(" 	0 -> Previous menu")
+				choose = input("Choose 0 to go back to previous menu: ")
+						
+				match choose:
+					case "0" : forward = False
+					case _ : print("	Invalid Input, Please go back to previous menu")
+
+
+		case "10" : 
+			forward = True
+			while(forward):
+				print("	Remainders")
+				print(" 	0 -> Previous menu")
+				choose = input("Choose 0 to go back to previous menu: ")
+						
+				match choose:
+					case "0" : forward = False
+					case _ : print("	Invalid Input, Please go back to previous menu")
+
+
 		case "11" : 
 			clock = """
 			Clock  
@@ -1009,20 +1183,101 @@ while(menu_display_going):
 				print(clock)
 				clock_menu = input("Choose from the above Clock dropdown menu: ")
 				match clock_menu:
-					case "1" : print("Alarm clock") 
-					case "2" : print("Clock settings") 
-					case "3" : print("Date setting")
-					case "4" : print("Stopwatch")
-					case "5" : print("Countdown timer")
-					case "6" : print("Auto update of date and time") 
+					case "1" : 
+						forward = True
+						while(forward):
+							print("	Alarm clock")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+
+
+
+					case "2" : 
+						forward = True
+						while(forward):
+							print("	Clock settings")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+
+					case "3" : 
+						forward = True
+						while(forward):
+							print("	Date setting")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+					case "4" : 
+						forward = True
+						while(forward):
+							print("	Stopwatch")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+
+					case "5" : 
+						forward = True
+						while(forward):
+							print("	Countdown timer")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+
+					case "6" :
+						forward = True
+						while(forward):
+							print("	Auto update of date and time")
+							print(" 	0 -> Previous menu")
+							choose = input("Choose 0 to go back to previous menu: ")
+						
+							match choose:
+								case "0" : forward = False
+								case _ : print("	Invalid Input, Please go back to previous menu")
+
+
 					case "0" : clock_menu_going = False
 					case _ : print("Invalid Input")
 
 
 		
 
-		case "12" : print("Profiles")
-		case "13" : print("Sim settings")
+		case "12" : 
+			forward = True
+			while(forward):
+				print("	Profiles")
+				print(" 	0 -> Previous menu")
+				choose = input("Choose 0 to go back to previous menu: ")
+						
+				match choose:
+					case "0" : forward = False
+					case _ : print("	Invalid Input, Please go back to previous menu")
+		case "13" : 
+			forward = True
+			while(forward):
+				print("	Sim settings")
+				print(" 	0 -> Previous menu")
+				choose = input("Choose 0 to go back to previous menu: ")
+						
+				match choose:
+					case "0" : forward = False
+					case _ : print("	Invalid Input, Please go back to previous menu")
+
 		case "0": menu_display_going = False
 		case _ : print("Invalid Input")
 
