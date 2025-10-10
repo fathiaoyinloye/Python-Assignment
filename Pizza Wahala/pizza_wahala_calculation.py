@@ -8,10 +8,8 @@ def get_sapa_Size(people):
 	price = boxes * 2500
 		
 			
-	print("The number of boxes slice is: ", boxes)
-	print("The number of remaining slice is: ", remainder)
-	print("The prices of Pizza is: ", price)
-
+	result = "The number of boxes slice is: " + str(boxes) + "\nThe number of remaining slice is: " + str(remainder) + "\nThe prices of Pizza is: " + str(price)
+	return result
 
 def get_small_Size(people):
 	boxes = people//6
@@ -23,9 +21,10 @@ def get_small_Size(people):
 	price = boxes * 2900
 		
 			
-	print("The number of boxes slice is: ", boxes)
-	print("The number of remaining slice is: ", remainder)
-	print("The prices of Pizza is: ", price)
+				
+	result = "The number of boxes slice is: " + str(boxes) + "\nThe number of remaining slice is: " + str(remainder) + "\nThe prices of Pizza is: " + str(price)
+	return result
+
 
 def get_big_Size(people):
 	boxes = people//8
@@ -36,9 +35,10 @@ def get_big_Size(people):
 	remainder = total_slice - people
 	price = boxes * 4000		
 			
-	print("The number of boxes slice is: ", boxes)
-	print("The number of remaining slice is: ", remainder)
-	print("The prices of Pizza is: ", price)
+				
+	result = "The number of boxes slice is: " + str(boxes) + "\nThe number of remaining slice is: " + str(remainder) + "\nThe prices of Pizza is: " + str(price)
+	return result
+
 
 def get_odogwu_Size(people):
 	boxes = people//12
@@ -48,13 +48,10 @@ def get_odogwu_Size(people):
 	total_slice = 12 * boxes
 	remainder = total_slice - people
 	price = boxes * 5200
-		
-			
-	print("The number of boxes slice is: ", boxes)
-	print("The number of remaining slice is: ", remainder)
-	print("The prices of Pizza is: ", price)
+				
+	result = "The number of boxes slice is: " + str(boxes) + "\nThe number of remaining slice is: " + str(remainder) + "\nThe prices of Pizza is: " + str(price)
+	return result
 
-print (get_sapa_Size(15))
-print (get_small_Size(15))
-print (get_big_Size(15))
-print (get_odogwu_Size(15))
+
+	
+		
