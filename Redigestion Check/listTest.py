@@ -1,7 +1,15 @@
-random_list = [1,2,3,4,5,6,7,8,9,10]
+import random
 
-sum = 0;
-for numbers in random_list:
+
+
+
+numbers = []
+for _ in range(11):
+	random_numbers = random.randrange(1,51)
+	numbers.append(random_numbers)
+print(numbers)
+
+'''for numbers in random_list:
 	sum = sum + 1
 	print(sum) 
 print(len(random_list))
@@ -21,3 +29,4 @@ name = [1]
 smallest = name[0]
 print(smallest)
 print(name)
+'''
