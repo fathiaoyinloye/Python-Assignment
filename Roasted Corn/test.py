@@ -1,6 +1,25 @@
-name = "stup"
+name = ["stup","girl" , "parra", "ancestors"]
 
-"""new_name = ""
+count = 0
+longest = len(name[0])
+longest_word = ""
+for characters in name:
+	if len(name[count]) > longest:
+		longest = len(name[count])
+		longest_word = name[count]
+	count = count + 1
+		
+result = [longest, longest_word]
+print(result)
+print(longest)
+
+
+
+
+"""
+
+
+new_name = ""
 check_ing = ""
 check_ly = ""
 for count in range (-1, -len(name) , -1):
@@ -31,6 +50,9 @@ else:
 
 print(name)
 
+
+
+
 #output = ""
 #for count in range (1, len(name) , 2):
 if len(name) > 1:
@@ -48,7 +70,9 @@ else:
 	output = name
 	
 print(output)
-""" 
+
+
+ 
 numbers = [3,5,6,7]
 count = 0
 for _ in numbers:
@@ -61,5 +85,5 @@ for _ in numbers:
 	sum = sum + numbers[index]
 	index += 1
 	print(sum)
-	
+"""
 

@@ -4,11 +4,14 @@ print(remove_odd_index("Semicolon"))
 print(add_suffix("Semicolonly"))
 print(two_first_last_characters("a"))
 print(characters_multiples("a", 6.5))
-numbers = [7, 2, 3, 4, 5]
-number = [1,4,6,7]
+numbers = [7, 2, 3, 4, 15]
+number = [1, -10,4,6,17]
+characters = ["Figure", "fatherly", "Pneumonoltramicroscopicsilicovolcanoconiosis", "appetite"]
 print(get_squares(numbers))
 print(get_sum_of_squares(numbers))
-
+print(get_longest_words(characters))
+print(get_minimum_number(number))
+print(get_maximum_number(number))
 
 
 

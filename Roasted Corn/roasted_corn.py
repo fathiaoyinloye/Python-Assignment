@@ -36,12 +36,14 @@ def add_suffix(name):
 
 	return name
 
+
 def two_first_last_characters(name):
 	if len(name) > 1:
 		output = name[0] + name[1] + name [len(name)- 2] + name [len(name)- 1]
 	else: 
 		output = '""'
 	return output
+
 
 def characters_multiples(letters, number):
 	output = ""
@@ -52,12 +54,17 @@ def characters_multiples(letters, number):
 		output = letters
 	
 	return	output
+
+
+
 def get_squares(numbers):
 	count = 0
 	for _ in numbers:
 		numbers[count] = numbers[count]**2
 		count = count + 1
 	return numbers
+
+
 def get_sum_of_squares (numbers):
 	count = 0
 	for _ in numbers:
@@ -70,14 +77,32 @@ def get_sum_of_squares (numbers):
 		index += 1
 	return sum
 
+def get_longest_words(name):
+	count = 0
+	longest = len(name[0])
+	longest_word = ""
+	for characters in name:
+		if len(name[count]) > longest:
+			longest = len(name[count])
+			longest_word = name[count]
+		count = count + 1
+		
+	result = [longest, longest_word]
+	return result
+def get_minimum_number (numbers):
+	minimum = numbers[0] 
+	count = 0
+	for _ in numbers:
+		if numbers[count] < minimum:
+			minimum = numbers[count]
+		count += 1
+	return minimum
 
-'''
-#print(remove_odd_index("Semicolon"))
-#print(add_suffix("Semicolonly"))
-#print(two_first_last_characters("a"))
-print(characters_multiples(a, 6.5))
-'''
-array = [7, 2, 3, 4, 5]
-arrays = [1,4,6,7]
-print(get_sum_of_squares(array))
-print(get_squares(arrays))
+def get_maximum_number (numbers):
+	maximum = numbers[0] 
+	count = 0
+	for _ in numbers:
+		if numbers[count] > maximum:
+			maximum = numbers[count]
+		count += 1
+	return maximum
