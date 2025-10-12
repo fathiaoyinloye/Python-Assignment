@@ -1,0 +1,10 @@
+number = 13.56449
+whole = round(number)
+tenth = round(number, 1)
+hundredth = round(number, 2)
+thousandth = round(number, 3)
+print(number)
+print(whole)
+print(tenth)
+print(hundredth)
+print(thousandth)
