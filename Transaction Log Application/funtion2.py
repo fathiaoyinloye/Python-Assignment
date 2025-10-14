@@ -14,20 +14,30 @@ def show_menu ():
 	return menu
 
 
-def get_deposit (amount, account_balance):
-	#account_balance = account_balance + amount
+def get_deposit (amount, account_balance,transaction):
+	
+	account_balance = account_balance + amount
 	transaction = f"Deposited {amount} and New Balance is {account_balance}"
+	return (account_balance, transaction)
 	
-	return transaction
 	
-def withdraw(amount, account_balance):
+def withdraw(amount, account_balance,transaction):
 	if(account_balance < amount):
 		account_balance = account_balance - 0
-		return "Withdrawal failed: Insufficient Fund"
-		
+		transaction = "Transaction failed due to insufficient balance"
+		print("Withdrawal failed: Insufficient Fund")
+		return (account_balance, transaction)
+
+	
 	else:
 		account_balance = account_balance - amount
 		transaction = f"Withdrew {amount} and New Balance is {account_balance}"
 	
+		return (account_balance, transaction)
+
+def get_transaction(transaction):
+	if transaction == "": 
+		print("No transactions yet")
+	else:
 		return transaction
 		

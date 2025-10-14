@@ -1,4 +1,4 @@
-fromfunctions import *
+from transaction_functions import *
 print(show_menu())
 account_balance = 0
 transaction = " "
@@ -20,7 +20,7 @@ match choice:
 
 
 	case "3": print("Show transactions")
-	case "0": print(Bye!)
+	case "0": print("Bye!")
 	case _ : 
 		print("Invalid Input")
 		print(show_menu())

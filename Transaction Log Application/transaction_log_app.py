@@ -1,25 +1,36 @@
-from transaction_functions import *
+from funtion2 import *
 print(show_menu())
-account_balance = 0
-transaction = " "
+balance = 0
+history = ""
 choice = "0"
+history_list = []
 while(choice != "4"):
 	choice = input("Choose your choice: ")
 	match choice:
 		case "1":
-			deposit = int(input("Enter Deposit Amount: "))
-			account_balance += deposit
-			print(get_deposit(deposit, account_balance))
+			deposit = float(input("Enter Deposit Amount: "))
+			output = get_deposit(deposit, balance, history)
+			balance = output[0]
+			history = output[1]
+			history_list.append(history)
+			print(history)
 		case "2": 
-			withdrawal = int(input("Enter Withdrawal Amount: "))
-			print(withdraw(withdrawal, account_balance))
-			account_balance = account_balance - withdrawal
+			withdrawal = float(input("Enter Withdrawal Amount: "))
+			output = withdraw(withdrawal, balance,history)
+			balance = output[0]
+			history = output[1]
+			history_list.append(history)
 
+			print(history)
 
+			
 
-
-		case "3": print("Show transactions")
-		case "4": print("Bye!")
+		case "3": 
+			print(get_transaction(history_list))
+		case "4": 
+			print(f"Final Balance {balance}")
+			print("Thank you for using Transaction Log Application")
+			
 		case _ : 
 			print("Invalid Input")
 			print(show_menu())
