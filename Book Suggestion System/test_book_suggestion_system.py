@@ -8,3 +8,5 @@ class TestBookSuggestionSystem(unittest.TestCase):
 		book_suggestion_system_functions.suggest_books(1)
 	def test_get_menu_existence(self):
 		book_suggestion_system_functions.get_menu()
+	def test_get_menu_working(self):
+		book_suggestion_system_functions.get_menu()
