@@ -36,8 +36,9 @@ def withdraw(amount, account_balance,transaction):
 		return (account_balance, transaction)
 
 def get_transaction(transaction):
-	if transaction == "": 
+	if transaction == []: 
 		print("No transactions yet")
 	else:
-		return transaction
+		for elements in transaction:
+			return transaction
 		

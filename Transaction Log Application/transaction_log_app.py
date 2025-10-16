@@ -26,7 +26,8 @@ while(choice != "4"):
 			
 
 		case "3": 
-			print(get_transaction(history_list))
+			output = get_transaction(history_list)
+			print(output)
 		case "4": 
 			print(f"Final Balance {balance}")
 			print("Thank you for using Transaction Log Application")
