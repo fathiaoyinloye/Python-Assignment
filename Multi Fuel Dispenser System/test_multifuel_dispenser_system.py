@@ -7,7 +7,18 @@ class TestMultifuelDispenserSystem(unittest.TestCase):
 
 	def test_calculate_total_cost_function_calculate_total_cost(self):
 		actual = multifuel_dispenser_system_function.calculate_total_cost("kerosene", 5,1000)
-		expected = 5000
+		expected = f"""
+*********************************************************
+	Customer's Transaction Receipt			
+*********************************************************
+	product 	---->	kerosene		
+	Amount		---->	5000.0			
+	Liters		---->	5L		
+		Thank You for Your Patronage		
+*********************************************************
+"""
+
+
 		self.assertEqual(actual,expected)
 
 	def test_calculate_total_cost_function_rejects_input_less_than_one_and_greater_than_fifty(self):

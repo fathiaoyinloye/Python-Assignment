@@ -25,23 +25,25 @@ def menu ():
 	return menu
 
 def calculate_total_cost(product, liter,price,transaction=[]):
+	if type(liter) != float:
+		return "Invalid input"
 	if (liter < 1 or liter > 50):
 		return "Liters must be between 1 - 50"
 	else:
 		cost = liter * price
 		receipt = f"""
 *********************************************************
-*	Customer's Transaction Receipt			*
+*	Customer's Transaction Receipt			
 *********************************************************
-*	product 	---->	{product}		*
-*	Amount		---->	{cost}			*
-*	Liters		---->	{liter}L		*
-*		Thank You for Your Patronage		*
+*	product 	---->	{product}		
+*	Amount		---->	{cost: .2f}		
+*	Liters		---->	{liter}L		
+*		Thank You for Your Patronage		
 *********************************************************
 """
 		transaction.append(receipt)
-
-		return receipt
+		print(receipt)
+		return cost
 
 def calculate_liters(product, cost,price,transaction=[]):
 	if (cost < price):
@@ -50,18 +52,16 @@ def calculate_liters(product, cost,price,transaction=[]):
 		liter = cost / price
 		receipt = f"""
 *********************************************************
-*	Customer's Transaction Receipt			*
+	Customer's Transaction Receipt			
 *********************************************************
-*	product 	---->	{product}		*
-*	Amount		---->	{cost}			*
-*	Liters		---->	{liter}L		*
-*		Thank You for Your Patronage		*
+	product 	---->	{product}		
+	Amount		---->	{cost}			
+	Liters		---->	{liter: .2f}L		
+		Thank You for Your Patronage		
 *********************************************************
 """
 		transaction.append(receipt)
 		return receipt
-
-print(calculate_liters("Fuel",1200,7000))
 
 
 def show_transactions(transactions):
