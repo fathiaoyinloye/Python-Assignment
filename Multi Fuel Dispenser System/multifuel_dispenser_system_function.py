@@ -1,3 +1,6 @@
+from datetime import date
+now = date.today()
+
 def home_menu():
 	home_menu = """
 *********************************************************
@@ -35,15 +38,19 @@ def calculate_total_cost(product, liter,price,transaction=[]):
 *********************************************************
 *	Customer's Transaction Receipt			
 *********************************************************
-*	product 	---->	{product}		
-*	Amount		---->	{cost: .2f}		
-*	Liters		---->	{liter}L		
+*	product 	---->	{product: <5}		
+*	Amount		---->	{cost: <5.2f}		
+*	Liters		---->	{liter: <5}L
+*	date		---->	{now}
+		
 *		Thank You for Your Patronage		
 *********************************************************
 """
 		transaction.append(receipt)
-		print(receipt)
-		return cost
+		return receipt
+
+
+
 
 def calculate_liters(product, cost,price,transaction=[]):
 	if (cost < price):
@@ -54,9 +61,11 @@ def calculate_liters(product, cost,price,transaction=[]):
 *********************************************************
 	Customer's Transaction Receipt			
 *********************************************************
-	product 	---->	{product}		
-	Amount		---->	{cost}			
-	Liters		---->	{liter: .2f}L		
+	product 	---->	{product: <5}		
+	Amount		---->	{cost: <5}			
+	Liters		---->	{liter: <5.2f}L
+	date		---->	{now}
+		
 		Thank You for Your Patronage		
 *********************************************************
 """

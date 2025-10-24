@@ -55,26 +55,30 @@ def calculate_cost(product, liter):
 		return 700 * liter
 
 
-def show_receipts(product,cost):
+def show_receipts(product,cost, transactions=[]):
 	liter = calculate_liter(product, cost)
 	if type(liter) in [int, float]:
-		return f"""
+		receipt = f"""
 *********************************************************
 	Customer's Transaction Receipt			
 *********************************************************
 	product 	---->	{product}		
 	Amount		---->	{cost}			
-	Liters		---->	{liter}L		
+	Liters		---->	{liter: .2}L		
 		Thank You for Your Patronage		
 *********************************************************
-"""
-	return ""
+"""  
+		
+		transactions.append(receipt)
+		return receipt
+	
 
 
-def show_transactions():
-	...
+def show_transactions(transactions):
+	if transactions == []:
+		return "No transaction made yet"
+	else:
 
-
-print(show_receipts("1", 5000))
-
-
+		for transaction in transactions:
+			print(transaction)
+		return "Thanks For Your Patronage"
