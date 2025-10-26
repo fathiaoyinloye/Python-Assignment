@@ -1,3 +1,6 @@
+from functools import reduce
+
+
 def append_to_tuple(numbers,number):
 	numbers[0].append(number)
 	return numbers
@@ -65,3 +68,61 @@ def convert_to_upper_case(string):
 def convert_strings_to_uppercase(my_list):
 	result = list(map(convert_to_upper_case, my_list))
 	return result
+
+
+def convert_first_letter_to_uppercase(word):
+	word2 = word[0].upper() + word[1:]
+	word = word2
+	return word
+
+
+def convert_first_letters_in_a_list_to_uppercase(my_list):
+	result = list(map(convert_first_letter_to_uppercase, my_list))
+	return result
+
+def add_ten_percent_to_price(price):
+	return price + price * 10//100
+
+def add_ten_percent_of_tax_to_prices(prices):
+	result = list(map(add_ten_percent_to_price,prices))
+	return result
+
+
+def get_sum(number_1, number2):
+	return number_1 + number2
+
+def get_sum_one_to_hundred():
+	my_list = list(range(1,51))
+	result = reduce(get_sum, my_list)
+	return result
+def get_maximum(number_1, number_2):
+	maximum = number_1
+	if number_2 > maximum:
+		maximum = number_2
+	return maximum
+def get_maximum_numbers(my_list):
+	result = reduce(get_maximum,my_list)
+	return result
+
+def get_squares(number):
+	return number*number
+
+def get_product(number_1, number_2):
+		return number_1 * number_2
+
+def get_squares_and_product_of_squares(my_list):
+	result_1 = list(map(get_squares,my_list))
+	result_2 = reduce(get_product,result_1)
+	return result_2
+
+def get_number_greater_than_five(number):
+	return number > 5
+
+def get_sum_greater_than_five(my_list):
+	result_1 = reduce(get_sum,my_list)
+	result_2 = list(filter(get_number_greater_than_five,result_1))
+	return result_2
+	
+	
+	
+

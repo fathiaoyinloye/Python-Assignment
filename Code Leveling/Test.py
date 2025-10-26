@@ -27,5 +27,9 @@ print(string[ : :-1])
 name = "fathia++*ghj"
 for word in name:
 	if word.isalpha():
-		word in name = word.upper()
-	print(name)
+		word = word.upper()
+	
+word = "string"
+word2 = word[0].upper() + word[1:]
+word = word2
+print(word)

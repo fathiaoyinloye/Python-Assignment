@@ -101,4 +101,68 @@ class TestCodeLevelingFunctions(unittest.TestCase):
 		expected =["WORLD", "GIRL", "MA__AM"]
 		self.assertEqual(actual,expected)
 
+	def test_that_function_convert_first_letter_to_uppercase_converts_first_letter_to_uppercase(self):
+		actual = convert_first_letter_to_uppercase("first")
+		expected = "First"
+		self.assertEqual(actual,expected)
+	
+	def test_that_function_convert_first_letters_in_a_list_to_uppercase_converts_first_letter_to_uppercase(self):
+		my_list = ["world", "girl"]
+		actual = convert_first_letters_in_a_list_to_uppercase(my_list)
+		expected = ["World", "Girl"]
+		self.assertEqual(actual,expected)
+
+	def test_that_function_add_ten_percent_to_price(self):
+		actual = add_ten_percent_to_price(1000)
+		self.assertEqual(actual,1100)
+
+	def test_that_function_test_that_function_add_ten_percent_to_series_of_prices(self):
+		my_list = [100,200,300]
+		actual = add_ten_percent_of_tax_to_prices(my_list)
+		expected = [110, 220, 330]
+		self.assertEqual(actual,expected)
+
+	def test_that_function_get_sum_sum_two_numbers(self):
+		actual = get_sum(2,7)
+		self.assertEqual(actual,9)
+
+	def test_that_function_get_sum_one_to_hundred_sum_up(self):
+		actual = get_sum_one_to_hundred()
+		self.assertEqual(actual,1275)
+
+	def test_that_function_get_maximum_gives_largest_number(self):
+		actual = get_maximum(9,5)
+		self.assertEqual(actual,9)
+
+	def test_that_function_get_maximum_numbers_gives_largest_number(self):
+		my_list = [100,200,300]
+		actual = get_maximum_numbers(my_list)
+		self.assertEqual(actual,300)
+
+	def test_that_function_get_squares_gives_squares_of_number(self):
+		actual = get_squares(4)
+		self.assertEqual(actual,16)
+
+	def test_that_function_get_product_gives_product_of_numbers(self):
+		actual = get_product(4,5)
+		self.assertEqual(actual,20)
+
+	def test_that_function_get_squares_and_product_of_squares_return_the_right_figure(self):
+		my_list = [1,2,3]
+		actual = get_squares_and_product_of_squares(my_list)
+		self.assertEqual(actual,36)
+
+	def test_that_sum_of_tuples_are_sum_appropriately(self):
+		my_list = [(1, 2), (3, 4), (5, 6)]
+		actual = get_sum(my_list,get_sum)
+		self.assertEqual(actual,[3,7,11])
+
+def test_that_function_get_sum_greater_than_five_return_the_right_figure(self):
+		my_list = [(1, 2), (3, 4), (5, 6)]
+		actual = get_sum_greater_than_five(my_list)
+		self.assertEqual(actual,[7,11])
+
+	 
+
+
 
