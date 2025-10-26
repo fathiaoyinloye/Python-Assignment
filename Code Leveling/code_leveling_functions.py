@@ -118,11 +118,48 @@ def get_squares_and_product_of_squares(my_list):
 def get_number_greater_than_five(number):
 	return number > 5
 
+	
+def sum_inner_list(two_D_List):
+	new_list = []
+	for element in two_D_List:
+		new_list.append(reduce(get_sum, element))
+		
+	return new_list
+
+
 def get_sum_greater_than_five(my_list):
-	result_1 = reduce(get_sum,my_list)
+	result_1 = sum_inner_list(my_list)
 	result_2 = list(filter(get_number_greater_than_five,result_1))
 	return result_2
-	
-	
-	
 
+
+def get_letter(my_list):
+	new_list = []
+	for element in my_list:
+		if element.isalpha():
+			new_list.append(element)
+		
+	return new_list
+
+def convert_letter_to_number(word):
+	return ord(word)
+
+def get_letter_convert_to_numbers(my_list):
+	my_number_list = []
+	result_1 = get_letter(my_list)
+	for element in result_1:
+		result = list(map(convert_letter_to_number, element))
+		my_number_list.append(result)
+	return my_number_list
+
+def get_sum_of_converted_numbers(my_list):
+	result_1 = get_letter_convert_to_numbers(my_list)
+	result_2 = sum_inner_list(result_1)
+	return result_2
+
+
+def concatenate_strings(word,words):
+	return word + " " + words
+
+def concatenate_series_of_strings(my_list):
+	result = reduce(concatenate_strings,my_list)

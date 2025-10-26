@@ -1,5 +1,7 @@
 import unittest
 from code_leveling_functions import *
+
+
 class TestCodeLevelingFunctions(unittest.TestCase):
 	def test_that_append_to_tuple_is_returning_a_tuple(self):
 		numbers = ([1,2,4],[7,9,7])
@@ -154,15 +156,27 @@ class TestCodeLevelingFunctions(unittest.TestCase):
 
 	def test_that_sum_of_tuples_are_sum_appropriately(self):
 		my_list = [(1, 2), (3, 4), (5, 6)]
-		actual = get_sum(my_list,get_sum)
+		actual = sum_inner_list(my_list)
 		self.assertEqual(actual,[3,7,11])
 
-def test_that_function_get_sum_greater_than_five_return_the_right_figure(self):
+	def test_that_function_get_sum_greater_than_five_return_the_right_figure(self):
 		my_list = [(1, 2), (3, 4), (5, 6)]
 		actual = get_sum_greater_than_five(my_list)
 		self.assertEqual(actual,[7,11])
 
-	 
+	def test_that_function_can_give_out_strings_that_consist_of_letters(self):
+		my_list = ['123', '456', '789', 'abc', 'def']
+		actual = get_letter(my_list)
+		self.assertEqual(actual, ["abc", "def"])
 
+	def test_that_letters_are_converted_to_numbers(self):
+		my_list = ['123', '456', '789', 'abc', 'def']
+		actual = get_letter_convert_to_numbers(my_list)
+		expected = [[97,98,99], [100,101,102]]
+		self.assertEqual(actual,expected)
 
+	def test_that_converted_numbers_are_sum_up(self):
+		my_list = ['123', '456', '789', 'abc', 'def']
+		actual = get_sum_of_converted_numbers(my_list)
+		expected = [[204], [303]]
 
