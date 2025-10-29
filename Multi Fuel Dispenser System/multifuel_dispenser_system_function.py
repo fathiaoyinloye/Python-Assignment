@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import datetime
 now = date.today()
 
 def home_menu():

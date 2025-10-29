@@ -29,7 +29,4 @@ for word in name:
 	if word.isalpha():
 		word = word.upper()
 	
-word = "string"
-word2 = word[0].upper() + word[1:]
-word = word2
 print(word)
