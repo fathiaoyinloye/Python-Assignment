@@ -32,10 +32,25 @@ class TestUniversitySystem(unittest.TestCase):
 		expected =  tuple
 		self.assertEqual(actual,expected)
 
-	def test_that_you_can_show_zipcode_if_right_input_is_inputed(self):
+	def test_that_you_can_show_zipcode_if_the_wrong_name_is_input_is_inputed(self):
 		createAStudentRecord("fathia",12,["maths","English","Computer"],{"city": "lagos", "zip": "896"},"123")
-		actual = display_zip_code ("123")
-		expected =  "<<<Zipcode>>>",896
+		actual = display_zip_code ("12")
+		expected =  "Username not found"
+		self.assertEqual(actual,expected)
+
+
+	def test_that_you_cant_show_zipcode_if_the_wrong__usernme_is_inputed_is_inputed(self):
+		createAStudentRecord("fathia",12,["maths","English","Computer"],{"city": "lagos", "zip": "896"},"123")
+		actual = display_zip_code ("13")
+		expected = "Username not found"
+		self.assertEqual(actual,expected)
+
+
+
+	def test_that_you_can_display_city_if_right_input_is_inputed(self):
+		createAStudentRecord("fathia",12,["maths","English","Computer"],{"city": "lagos", "zip": "896"},"123")
+		actual = display_city ("123")
+		expected =  "<<<City>>>","lagos"
 		self.assertEqual(actual,expected)
 
 

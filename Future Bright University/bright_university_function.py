@@ -215,9 +215,13 @@ Welcome To Future Bright University Application
 
 
 
-
-
-
+def print_courses_available(courses):
+	print("These are the courses approved by the university")
+	count = 1
+	for course in courses:
+		print(f"{count}	=>	{course}")
+		count += 1
+	
 
 
 

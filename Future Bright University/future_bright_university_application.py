@@ -14,6 +14,7 @@ while True:
 				age = input(f"Enter {name} age: ")
 			going = True
 			while(going):
+				print(f"Maximum Number of scores that can be offered in the college is {len(my_subject)}")
 				no_of_course = input(f"Enter number of course {name} wants to register: ")
 				while no_of_course.isdigit() == False:
 					print(f"Invalid Number of course, please enter the number of course {name} is to  offer: ")
@@ -22,13 +23,16 @@ while True:
 				if(no_of_course > len(my_subject) or no_of_course  < 1 ):
 					print("No of courses to be offerred cannot be less than 1 or greater than courses offerred in the college.")
 				else:
+					print_courses_available(my_subject )
 					break
+
 			while(no_of_course > 0):
 				course = input("Enter the course to be registered: ").lower()
 				if course in my_subject and course not in courses_offerred:
-					courses_offerred.append(course)	
+					courses_offerred.append(course)
+					print(f"{name} is now offering  {course}")	
 				else: 
-					print("Invalid Input, Course Inputed is not offerred in the collede")
+					print("Invalid Input, Course Inputed is not offerred in the college")
 					no_of_course += 1
 	
 				no_of_course -= 1
@@ -72,6 +76,7 @@ while True:
 
 		case "6":
 			username = input("Enter student username to  add new Course: ")
+			print_courses_available(my_subject )
 			new_course = input("Enter new course to be added: ").lower()
 			print(add_new_course(username, new_course, my_subject))
 
