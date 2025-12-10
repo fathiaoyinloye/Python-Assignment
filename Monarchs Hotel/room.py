@@ -3,17 +3,17 @@ from RoomType import RoomType
 class Room:
 
     def __init__(self, roomType: RoomType):
-        self.number = 0
-        self.type = roomType
-        self.price = roomType.value
+        self.__number = 0
+        self.__type = roomType
+        self.__price = roomType.value
         self.status = RoomStatus.AVAILABLE
 
-
+    @property
     def getRoomNumber(self):
         return self.number
     def setRoomNumber(self, number):
         self.number = number
-
+    @property
     def getRoomType(self):
         return self.type
 
